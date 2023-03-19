@@ -1,4 +1,4 @@
-package xquare.com.server.application.usecase
+package xquare.com.server.application.report.usecase
 
 import java.util.UUID
 import kotlinx.coroutines.runBlocking
