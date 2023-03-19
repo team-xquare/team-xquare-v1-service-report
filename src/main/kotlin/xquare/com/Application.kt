@@ -25,7 +25,6 @@ fun Application.module() {
     DatabaseConfig.init()
     reportRouting()
     configureSerialization()
-    configureDatabases()
     configureHTTP()
     configureRouting()
 }
