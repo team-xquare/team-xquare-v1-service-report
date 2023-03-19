@@ -14,9 +14,9 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Patch)
         allowHeader(HttpHeaders.Authorization)
         allowHeader(HttpHeaders.ContentType)
-        allowHost("https://service.xquare.app")
-        allowHost("https://admin.xquare.app")
-        allowHost("http://localhost:3000")
-        allowHost("http://localhost:3001")
+        allowHost("service.xquare.app", schemes = listOf("https"))
+        allowHost("admin.xquare.app", schemes = listOf("https"))
+        allowHost("localhost:3000", schemes = listOf("http"))
+        allowHost("localhost:3001", schemes = listOf("http"))
     }
 }
