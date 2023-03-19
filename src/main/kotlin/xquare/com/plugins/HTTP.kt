@@ -13,7 +13,10 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Delete)
         allowMethod(HttpMethod.Patch)
         allowHeader(HttpHeaders.Authorization)
-        allowHeader("MyCustomHeader")
-        anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
+        allowHeader(HttpHeaders.ContentType)
+        allowHost("https://service.xquare.app")
+        allowHost("https://admin.xquare.app")
+        allowHost("http://localhost:3000")
+        allowHost("http://localhost:3001")
     }
 }
