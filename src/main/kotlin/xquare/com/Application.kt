@@ -3,11 +3,11 @@ package xquare.com
 import io.ktor.server.application.Application
 import org.koin.core.context.startKoin
 import org.koin.core.context.stopKoin
-import xquare.com.infrastructure.database.config.DatabaseConfig
-import xquare.com.infrastructure.module.reportModule
+import xquare.com.server.infrastructure.database.config.DatabaseConfig
+import xquare.com.server.infrastructure.module.reportModule
 import xquare.com.plugins.configureHTTP
 import xquare.com.plugins.configureSerialization
-import xquare.com.presentation.api.reportRouting
+import xquare.com.server.presentation.api.reportRouting
 
 fun main(args: Array<String>) {
     stopKoin()

@@ -1,11 +1,11 @@
-package xquare.com.infrastructure.database.config
+package xquare.com.server.infrastructure.database.config
 
 import kotlinx.coroutines.Dispatchers
 import org.jetbrains.exposed.sql.Database
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 import org.jetbrains.exposed.sql.transactions.transaction
-import xquare.com.infrastructure.database.entity.ReportEntity
+import xquare.com.server.infrastructure.database.entity.ReportEntity
 
 object DatabaseConfig {
     fun init() {

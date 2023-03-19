@@ -1,11 +1,11 @@
-package xquare.com.infrastructure.database
+package xquare.com.server.infrastructure.database
 
 import java.time.LocalDateTime
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.transactions.transaction
-import xquare.com.domain.report.Report
-import xquare.com.infrastructure.database.config.DatabaseConfig.query
-import xquare.com.infrastructure.database.entity.ReportEntity
+import xquare.com.server.domain.report.Report
+import xquare.com.server.infrastructure.database.config.DatabaseConfig.query
+import xquare.com.server.infrastructure.database.entity.ReportEntity
 
 class ReportRepository {
 

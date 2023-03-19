@@ -1,4 +1,4 @@
-package xquare.com.domain.report
+package xquare.com.server.domain.report
 
 enum class Category {
     HOME,

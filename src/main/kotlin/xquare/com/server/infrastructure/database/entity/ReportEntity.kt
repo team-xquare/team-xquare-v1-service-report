@@ -1,9 +1,9 @@
-package xquare.com.infrastructure.database.entity
+package xquare.com.server.infrastructure.database.entity
 
 import org.jetbrains.exposed.dao.id.UUIDTable
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNotNull
 import org.jetbrains.exposed.sql.javatime.datetime
-import xquare.com.domain.report.Category
+import xquare.com.server.domain.report.Category
 
 object ReportEntity : UUIDTable("tbl_report") {
     val userId = uuid("user_id")

@@ -1,4 +1,4 @@
-package xquare.com.presentation.api.dto.response
+package xquare.com.server.presentation.api.dto.response
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

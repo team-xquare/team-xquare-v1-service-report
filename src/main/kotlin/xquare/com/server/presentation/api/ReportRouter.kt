@@ -1,4 +1,4 @@
-package xquare.com.presentation.api
+package xquare.com.server.presentation.api
 
 import io.ktor.http.HttpStatusCode
 import io.ktor.server.application.Application
@@ -10,10 +10,10 @@ import io.ktor.server.routing.route
 import io.ktor.server.routing.routing
 import java.util.UUID
 import org.koin.ktor.ext.inject
-import xquare.com.application.usecase.CreateReportUseCase
-import xquare.com.infrastructure.error.BaseException
-import xquare.com.presentation.api.dto.request.CreateReportRequest
-import xquare.com.presentation.api.dto.response.CreateReportResponse
+import xquare.com.server.application.usecase.CreateReportUseCase
+import xquare.com.server.infrastructure.error.BaseException
+import xquare.com.server.presentation.api.dto.request.CreateReportRequest
+import xquare.com.server.presentation.api.dto.response.CreateReportResponse
 
 fun Application.reportRouting() {
     val createReportUseCase: CreateReportUseCase by inject()

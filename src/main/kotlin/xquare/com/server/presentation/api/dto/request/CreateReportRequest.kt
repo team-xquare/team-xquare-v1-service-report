@@ -1,7 +1,7 @@
-package xquare.com.presentation.api.dto.request
+package xquare.com.server.presentation.api.dto.request
 
 import kotlinx.serialization.Serializable
-import xquare.com.domain.report.Category
+import xquare.com.server.domain.report.Category
 
 @Serializable
 data class CreateReportRequest(

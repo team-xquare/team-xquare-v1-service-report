@@ -1,4 +1,4 @@
-package xquare.com.infrastructure.error
+package xquare.com.server.infrastructure.error
 
 data class BaseException(
     val status: Int = 500,
