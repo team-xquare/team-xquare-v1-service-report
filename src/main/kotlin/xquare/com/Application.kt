@@ -1,6 +1,7 @@
 package xquare.com
 
 import io.ktor.server.application.*
+import xquare.com.infrastructure.database.config.DatabaseConfig
 import xquare.com.plugins.*
 
 fun main(args: Array<String>): Unit =
@@ -8,6 +9,7 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
+    DatabaseConfig.init()
     configureSerialization()
     configureDatabases()
     configureHTTP()
