@@ -9,7 +9,7 @@ import xquare.com.infrastructure.database.entity.ReportEntity
 
 class ReportRepository {
 
-    suspend fun save(report: Report) = query {
+    suspend fun saveAndReturnId(report: Report) = query {
         transaction {
             ReportEntity.insert {
                 it[userId] = report.userId
@@ -17,7 +17,7 @@ class ReportRepository {
                 it[category] = report.category
                 it[imageUrl] = report.imageUrl
                 it[createdAt] = report.createdAt ?: LocalDateTime.now()
-            }
+            }[ReportEntity.id]
         }
     }
 }
