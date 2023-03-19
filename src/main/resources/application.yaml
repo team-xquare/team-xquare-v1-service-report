@@ -1,4 +1,10 @@
 ktor:
+  database:
+    url: $DB_URL
+    driver: $DB_DRIVER
+    username: $DB_USERNAME
+    password: $DB_PASSWORD
+
   application:
     modules:
       - xquare.com.ApplicationKt.module
