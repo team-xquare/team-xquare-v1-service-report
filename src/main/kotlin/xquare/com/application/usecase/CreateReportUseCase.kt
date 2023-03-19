@@ -10,7 +10,7 @@ class CreateReportUseCase(
     private val reportRepository: ReportRepository
 ) {
 
-    fun execute(userId: UUID, request: CreateReportRequest) {
+    fun execute(userId: UUID, request: CreateReportRequest): UUID {
         val report = request.run {
             Report(
                 id = null,
@@ -22,8 +22,10 @@ class CreateReportUseCase(
             )
         }
 
-        runBlocking {
-            reportRepository.save(report)
+        val reportId = runBlocking {
+            reportRepository.saveAndReturnId(report)
         }
+
+        return reportId.value
     }
 }
