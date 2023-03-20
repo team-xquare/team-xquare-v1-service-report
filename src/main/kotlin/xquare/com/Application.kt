@@ -8,6 +8,7 @@ import xquare.com.server.infrastructure.module.reportModule
 import xquare.com.plugins.configureHTTP
 import xquare.com.plugins.configureSerialization
 import xquare.com.server.presentation.api.reportRouting
+import xquare.com.server.presentation.filter.authenticationFilter
 
 fun main(args: Array<String>) {
     stopKoin()
@@ -24,7 +25,8 @@ fun main(args: Array<String>) {
 @Suppress("unused")
 fun Application.module() {
     DatabaseConfig.init()
-    reportRouting()
     configureSerialization()
     configureHTTP()
+    authenticationFilter()
+    reportRouting()
 }
