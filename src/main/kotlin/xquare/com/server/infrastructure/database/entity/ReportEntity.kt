@@ -1,7 +1,6 @@
 package xquare.com.server.infrastructure.database.entity
 
 import org.jetbrains.exposed.dao.id.UUIDTable
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.isNotNull
 import org.jetbrains.exposed.sql.javatime.datetime
 import xquare.com.server.domain.report.Category
 
