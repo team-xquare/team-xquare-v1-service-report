@@ -6,6 +6,7 @@ import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.experimental.newSuspendedTransaction
 import org.jetbrains.exposed.sql.transactions.transaction
 import xquare.com.server.infrastructure.database.entity.ReportEntity
+import xquare.com.server.infrastructure.database.entity.ReportImageEntity
 
 object DatabaseConfig {
     fun init() {
@@ -18,6 +19,7 @@ object DatabaseConfig {
 
         transaction {
             SchemaUtils.create(ReportEntity)
+            SchemaUtils.create(ReportImageEntity)
         }
     }
 
