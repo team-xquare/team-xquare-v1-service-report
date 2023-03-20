@@ -8,6 +8,6 @@ import xquare.com.server.domain.report.Category
 data class CreateReportRequest(
     val reason: String,
     val category: Category,
-    @SerialName("image_url")
-    val imageUrl: String?
+    @SerialName("image_urls")
+    val imageUrls: List<String>
 )
