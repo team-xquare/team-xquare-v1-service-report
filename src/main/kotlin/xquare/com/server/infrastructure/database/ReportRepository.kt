@@ -15,7 +15,6 @@ class ReportRepository {
                 it[userId] = report.userId
                 it[reason] = report.reason
                 it[category] = report.category
-                it[imageUrl] = report.imageUrl
                 it[createdAt] = report.createdAt ?: LocalDateTime.now()
             }[ReportEntity.id]
         }
