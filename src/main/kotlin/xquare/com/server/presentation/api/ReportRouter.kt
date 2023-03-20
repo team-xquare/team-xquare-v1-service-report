@@ -21,8 +21,8 @@ fun Application.reportRouting() {
     routing {
         route("/reports") {
             post {
-                val request = call.receive<CreateReportRequest>()
                 val userId = call.request.headers["Request-User-Id"]
+                val request = call.receive<CreateReportRequest>()
 
                 var reportId = UUID(0, 0)
                 runCatching {
