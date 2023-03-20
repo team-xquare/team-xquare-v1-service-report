@@ -5,7 +5,7 @@ import io.ktor.server.application.Application
 import io.ktor.server.application.ApplicationCallPipeline
 import io.ktor.server.application.call
 import io.ktor.server.response.respond
-import xquare.com.server.infrastructure.error.BaseException
+import xquare.com.server.domain.common.exception.BaseException
 
 fun Application.authenticationFilter() = intercept(ApplicationCallPipeline.Call) {
     val headers = call.request.headers
@@ -15,7 +15,7 @@ fun Application.authenticationFilter() = intercept(ApplicationCallPipeline.Call)
     val userAuthorities = headers["Request-User-Authorities"]
 
     if (userId == null || userRole == null || userAuthorities == null) {
-        call.respond(HttpStatusCode.InternalServerError, BaseException(400, "Invalid Header Value"))
+        call.respond(HttpStatusCode.Unauthorized, BaseException(401, "Invalid Header Value"))
     }
     proceed()
 }
