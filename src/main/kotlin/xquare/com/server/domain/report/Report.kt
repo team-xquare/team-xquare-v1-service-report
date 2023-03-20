@@ -4,10 +4,9 @@ import java.time.LocalDateTime
 import java.util.UUID
 
 data class Report(
-    val id: UUID?,
+    val id: UUID? = null,
     val userId: UUID,
     val reason: String,
     val category: Category,
-    val imageUrl: String?,
-    val createdAt: LocalDateTime?,
+    val createdAt: LocalDateTime? = LocalDateTime.now()
 )
