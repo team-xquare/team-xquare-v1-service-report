@@ -17,8 +17,8 @@ class CreateReportUseCase(
                 userId = userId,
                 reason = reason,
                 category = category,
+                imageUrl = imageUrl,
                 createdAt = null,
-                imageUrl = null
             )
         }
 
