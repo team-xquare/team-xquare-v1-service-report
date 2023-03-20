@@ -23,8 +23,6 @@ fun Application.reportRouting() {
             post {
                 val request = call.receive<CreateReportRequest>()
                 val userId = call.request.headers["Request-User-Id"]
-                val userRole = call.request.headers["Request-User-Role"]
-                val authority = call.request.headers["Request-User-Authorities"]
 
                 var reportId = UUID(0, 0)
                 runCatching {
