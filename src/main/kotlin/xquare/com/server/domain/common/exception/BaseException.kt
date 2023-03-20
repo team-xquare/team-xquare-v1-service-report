@@ -1,4 +1,4 @@
-package xquare.com.server.infrastructure.error
+package xquare.com.server.domain.common.exception
 
 import kotlinx.serialization.Serializable
 

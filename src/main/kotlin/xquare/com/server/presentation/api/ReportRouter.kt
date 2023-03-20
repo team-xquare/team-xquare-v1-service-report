@@ -11,7 +11,7 @@ import io.ktor.server.routing.routing
 import java.util.UUID
 import org.koin.ktor.ext.inject
 import xquare.com.server.application.report.usecase.CreateReportUseCase
-import xquare.com.server.infrastructure.error.BaseException
+import xquare.com.server.domain.common.exception.BaseException
 import xquare.com.server.presentation.api.dto.request.CreateReportRequest
 import xquare.com.server.presentation.api.dto.response.CreateReportResponse
 
