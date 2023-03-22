@@ -8,14 +8,10 @@ import io.ktor.server.response.respond
 import xquare.com.server.domain.common.exception.BaseException
 
 fun Application.authenticationFilter() = intercept(ApplicationCallPipeline.Call) {
-    val headers = call.request.headers
+    val userId = call.request.headers["Request-User-Id"]
 
-    val userId = headers["Request-User-Id"]
-    val userRole = headers["Request-User-Role"]
-    val userAuthorities = headers["Request-User-Authorities"]
-
-    if (userId == null || userRole == null || userAuthorities == null) {
-        call.respond(HttpStatusCode.Unauthorized, BaseException(401, "Invalid Header Value"))
+    if (userId == null) {
+        call.respond(HttpStatusCode.Unauthorized, BaseException(401, "Unauthorized"))
     }
     proceed()
 }
