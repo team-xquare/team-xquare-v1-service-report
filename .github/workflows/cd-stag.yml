@@ -52,7 +52,7 @@ jobs:
           registry: ${{ steps.ecr.outputs.registry }}
           tags: ${{ github.sha }}
           buildargs: |
-            DB_URL=${{secrets.DB_URL}
+            DB_URL=${{secrets.DB_URL}}
             DB_DRIVER=${{secrets.DB_DRIVER}}
             DB_USERNAME=${{secrets.DB_USERNAME}}
             DB_PASSWORD=${{secrets.DB_PASSWORD}}
