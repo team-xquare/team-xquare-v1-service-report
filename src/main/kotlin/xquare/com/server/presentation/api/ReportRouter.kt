@@ -18,7 +18,7 @@ fun Application.reportRouting() {
     val createReportUseCase: CreateReportUseCase by inject()
 
     routing {
-        route("") {
+        route("/reports") {
             post {
                 val userId = call.request.headers["Request-User-Id"]
                 val request = call.receive<CreateReportRequest>()
