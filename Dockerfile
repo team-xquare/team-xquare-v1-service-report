@@ -3,7 +3,7 @@ FROM openjdk:17.0.1-jdk-slim
 EXPOSE 8080
 
 RUN apt-get update && \
-    apt-get install -y curl && \
+    apt-get install -y --no-install-recommends curl && \
     curl -sSLo koin https://github.com/InsertKoinIO/koin/releases/tag/ktor-3.4.0 && \
     chmod +x koin && \
     mv koin /usr/local/bin
